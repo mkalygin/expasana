@@ -1,0 +1,8 @@
+{
+  "name": "asana-exporter",
+  "version": "1.0.0",
+  "description": "Allows to export all tasks data from Asana projects",
+  "main": "index.js",
+  "author": "Michael Kalygin",
+  "license": "MIT"
+}
