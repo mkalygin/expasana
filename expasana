@@ -8,13 +8,13 @@ const list = (value = '') => value.split(',');
 program
   .version(version, '-v, --version')
   .option('-p, --projects <ids>',
-          'Comma-separated list of project IDs',
-          list, [])
+          'comma-separated list of project IDs',
+          list)
   .option('-t, --token [value]',
-          'Asana access token, default is ASANA_ACCESS_TOKEN environment variable value',
+          'Asana access token (default: ASANA_ACCESS_TOKEN environment variable value)',
           process.env.ASANA_ACCESS_TOKEN)
   .option('-o, --output [path]',
-          'Output ZIP file path',
+          'output ZIP file path',
           'tasks.zip')
   .parse(process.argv);
 
