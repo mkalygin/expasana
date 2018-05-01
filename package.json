@@ -1,8 +1,22 @@
 {
   "name": "asana-exporter",
   "version": "1.0.0",
-  "description": "Allows to export all tasks data from Asana projects",
-  "main": "index.js",
-  "author": "Michael Kalygin",
-  "license": "MIT"
+  "description": "Tasks exporter CLI for Asana",
+  "main": "expasana",
+  "repository": "git@github.com:mkalygin/expasana.git",
+  "author": "Michael Kalygin <michael.kalygin@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "expasana",
+  ],
+  "keywords": [
+    "asana",
+    "api",
+    "cli",
+    "export",
+    "data"
+  ],
+  "dependencies": {
+    "commander": "^2.15.1"
+  }
 }
