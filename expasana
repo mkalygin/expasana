@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+const { version } = require('./package.json');
+const program = require('commander');
+
+const list = (value = '') => value.split(',');
+
+program
+  .version(version, '-v, --version')
+  .option('-p, --projects <ids>',
+          'Comma-separated list of project IDs',
+          list, [])
+  .option('-t, --token [value]',
+          'Asana access token, default is ASANA_ACCESS_TOKEN environment variable value',
+          process.env.ASANA_ACCESS_TOKEN)
+  .option('-o, --output [path]',
+          'Output ZIP file path',
+          'tasks.zip')
+  .parse(process.argv);
+
+if (!program.token) {
+   console.error('Asana access token is undefined, ' +
+                 'please set ASANA_ACCESS_TOKEN environment variable ' +
+                 'or use -t or --token argument');
+
+   process.exit(1);
+}
